@@ -9,7 +9,7 @@ const publicFiles = new Set([
   'assets/portada.png', 'assets/cuenta-regresiva.png', 'assets/cuenta-regresiva-limpia.png', 'assets/fecha.png',
   'assets/ubicacion.png', 'assets/musica.png', 'assets/regalos.png',
   'assets/confirmacion.png', 'assets/modal-como-llegar.png', 'assets/modal-regalos.png',
-  'assets/bloomdate-logo.svg', 'assets/wonderwall.mp3'
+  'assets/bloomdate-logo.svg', 'assets/wonderwall.mp3', 'assets/bianca-compartir.png'
 ]);
 
 http.createServer((req, res) => {
