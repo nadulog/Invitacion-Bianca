@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#020d20">
+  <title>XV Bianca</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <audio id="invitationAudio" src="assets/wonderwall.mp3" preload="metadata" loop></audio>
+  <section class="intro-screen" id="introScreen" aria-label="Ingresar a la invitación">
+    <div class="intro-stars" aria-hidden="true"></div>
+    <div class="intro-burst" id="introBurst" aria-hidden="true"></div>
+    <div class="intro-content">
+      <span class="intro-xv">XV</span>
+      <h1>Bianca</h1>
+      <p>Una noche escrita en las estrellas</p>
+      <div class="intro-actions">
+        <button id="enterWithMusic" type="button"><span aria-hidden="true">♫</span> ENTRAR CON MÚSICA</button>
+        <button id="enterWithoutMusic" type="button"><span aria-hidden="true">☆</span> ENTRAR SIN MÚSICA</button>
+      </div>
+    </div>
+  </section>
+  <button class="audio-toggle" id="audioToggle" type="button" aria-label="Reproducir música" aria-pressed="false">
+    <span aria-hidden="true">♫</span>
+  </button>
+  <main class="invitation" aria-label="Invitación de quince años de Bianca">
+    <section class="panel cover" aria-label="Portada">
+      <img src="assets/portada.png" alt="XV Bianca, noche estrellada">
+    </section>
+    <section class="panel countdown-panel">
+      <img src="assets/cuenta-regresiva-limpia.png" alt="Cuenta regresiva para la fiesta">
+      <div class="countdown-live" aria-label="Cuenta regresiva">
+        <div><strong id="days">00</strong><span>DÍAS</span></div><i aria-hidden="true">✦</i>
+        <div><strong id="hours">00</strong><span>HORAS</span></div><i aria-hidden="true">✦</i>
+        <div><strong id="minutes">00</strong><span>MINUTOS</span></div><i aria-hidden="true">✦</i>
+        <div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
+      </div>
+    </section>
+    <section class="panel linked date-reveal" id="dateReveal">
+      <img src="assets/fecha.png" alt="Sábado 7 de noviembre de 2026 a las 22 horas">
+      <button class="hotspot calendar" type="button" aria-label="Agregar evento al calendario"></button>
+      <canvas class="reveal-canvas" id="revealCanvas" aria-label="Pasá el dedo para descubrir la fecha"></canvas>
+      <div class="magic-trail" id="magicTrail" aria-hidden="true"></div>
+      <div class="reveal-guide" id="revealGuide" aria-hidden="true">
+        <strong>HAY UNA FECHA POR DESCUBRIR</strong>
+        <span>Pasá tu dedo sobre la pantalla</span>
+        <div class="finger-demo"><b>☝</b><i></i></div>
+      </div>
+    </section>
+    <section class="panel linked">
+      <img src="assets/ubicacion.png" alt="Salón Gammal, Calle Alegre, San Ramón, La Banda">
+      <button class="hotspot location" type="button" aria-label="Ver opciones para llegar"></button>
+    </section>
+    <section class="panel linked music-scene" id="musicScene">
+      <img src="assets/musica.png" alt="Música: ayudame a crear la playlist de mi fiesta">
+      <a class="hotspot music" href="https://open.spotify.com/playlist/3CiQNb7Z3iKkGIxyQnUJXI?si=s0YAfoKpT3KAzoTjKKUZMA&amp;utm_source=whatsapp&amp;pi=l7qLKkXcRImpS&amp;pt=d78b7dd5c385eaf0836ebc6bb474d070" target="_blank" rel="noopener" aria-label="Agregar una canción en Spotify"></a>
+      <div class="music-magic" aria-hidden="true">
+        <i></i><i></i><i></i>
+        <div class="equalizer">
+          <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+          <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+        </div>
+      </div>
+    </section>
+    <section class="panel linked">
+      <img src="assets/regalos.png" alt="Información para regalos">
+      <button class="hotspot gift" type="button" aria-label="Ver datos para regalos"></button>
+      <div class="toast" role="status" aria-live="polite">Alias copiado</div>
+    </section>
+    <section class="panel linked">
+      <img src="assets/confirmacion.png" alt="Confirmar asistencia hasta el 18 de octubre">
+      <a class="hotspot confirm" href="https://bloomdate-rsvp.netlify.app/r/cumple-xv-bianca" target="_blank" rel="noopener" aria-label="Confirmar asistencia en BloomDate"></a>
+    </section>
+    <footer class="site-footer">
+      <img class="footer-logo" src="assets/bloomdate-logo.svg" alt="BloomDate">
+      <p class="footer-love">Hecho con amor <span aria-label="corazón">♥</span> por BloomDate</p>
+      <nav class="footer-links" aria-label="Contacto de BloomDate">
+        <a href="https://wa.me/541140436324" target="_blank" rel="noopener" aria-label="WhatsApp de BloomDate">
+          <img src="https://cdn.simpleicons.org/whatsapp/e9e7e2" alt="" aria-hidden="true">
+        </a>
+        <a href="https://www.instagram.com/bloomdate.invitaciones/" target="_blank" rel="noopener" aria-label="Instagram de BloomDate">
+          <img src="https://cdn.simpleicons.org/instagram/e9e7e2" alt="" aria-hidden="true">
+        </a>
+        <a href="https://bloomdate-site.netlify.app/" target="_blank" rel="noopener" aria-label="Web de BloomDate">
+          <img src="https://api.iconify.design/lucide:globe-2.svg?color=%23e9e7e2" alt="" aria-hidden="true">
+        </a>
+      </nav>
+    </footer>
+  </main>
+  <dialog class="location-modal" id="locationModal" aria-label="Cómo llegar a Gammal">
+    <div class="location-card">
+      <img src="assets/modal-como-llegar.png" alt="Cómo llegar a Gammal, Calle Alegre, San Ramón, La Banda">
+      <button class="location-close" type="button" aria-label="Cerrar"></button>
+      <a class="location-action google" href="https://maps.app.goo.gl/34qHb8VYdo6m4sgFA?g_st=aw" target="_blank" rel="noopener" aria-label="Abrir en Google Maps"></a>
+      <a class="location-action waze" href="https://www.waze.com/ul?q=Gammal%2C%20Calle%20Alegre%2C%20San%20Ram%C3%B3n%2C%20La%20Banda&navigate=yes" target="_blank" rel="noopener" aria-label="Abrir en Waze"></a>
+      <button class="location-action copy-address" type="button" aria-label="Copiar dirección"></button>
+    </div>
+  </dialog>
+  <dialog class="image-modal" id="giftModal" aria-label="Datos para regalos">
+    <div class="image-modal-card">
+      <img src="assets/modal-regalos.png" alt="Regalos: Bianca Agustina Aguirre, alias bianncaaguirreee-, Mercado Pago">
+      <button class="image-modal-close gift-close" type="button" aria-label="Cerrar"></button>
+      <button class="image-modal-action copy-alias" type="button" aria-label="Copiar alias"></button>
+    </div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
