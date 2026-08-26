@@ -3,13 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 const root = __dirname;
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'application/javascript; charset=utf-8', '.png': 'image/png', '.svg': 'image/svg+xml', '.mp3': 'audio/mpeg' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'application/javascript; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp3': 'audio/mpeg' };
 const publicFiles = new Set([
   'index.html', 'styles.css', 'script.js',
   'assets/portada.png', 'assets/cuenta-regresiva.png', 'assets/cuenta-regresiva-limpia.png', 'assets/fecha.png',
   'assets/ubicacion.png', 'assets/musica.png', 'assets/regalos.png',
   'assets/confirmacion.png', 'assets/modal-como-llegar.png', 'assets/modal-regalos.png',
-  'assets/bloomdate-logo.svg', 'assets/wonderwall.mp3', 'assets/bianca-compartir.png'
+  'assets/bloomdate-logo.svg', 'assets/wonderwall.mp3', 'assets/bianca-compartir.png',
+  'assets/bianca-compartir-v2.jpg'
 ]);
 
 http.createServer((req, res) => {
