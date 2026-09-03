@@ -277,3 +277,19 @@ document.querySelector('.copy-address')?.addEventListener('click', async () => {
     notify(address);
   }
 });
+
+const galleryModal = document.querySelector('#galleryModal');
+const galleryModalImage = galleryModal?.querySelector('img');
+
+document.querySelectorAll('.gallery-photo').forEach((photo) => {
+  photo.addEventListener('click', () => {
+    galleryModalImage.src = photo.dataset.full;
+    galleryModalImage.alt = photo.querySelector('img')?.alt || 'Foto ampliada de Bianca';
+    galleryModal.showModal();
+  });
+});
+
+document.querySelector('.gallery-modal-close')?.addEventListener('click', () => galleryModal.close());
+galleryModal?.addEventListener('click', (event) => {
+  if (event.target === galleryModal) galleryModal.close();
+});
