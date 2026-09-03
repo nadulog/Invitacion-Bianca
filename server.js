@@ -13,7 +13,8 @@ const publicFiles = new Set([
   'assets/bianca-despedida.jpeg',
   'assets/confirmacion.png', 'assets/modal-como-llegar.png', 'assets/modal-regalos.png',
   'assets/bloomdate-logo.svg', 'assets/wonderwall.mp3', 'assets/bianca-compartir.png',
-  'assets/bianca-compartir-v2.jpg', 'assets/intro-bianca.png', 'assets/bianca-whatsapp.png'
+  'assets/bianca-compartir-v2.jpg', 'assets/intro-bianca.png', 'assets/bianca-whatsapp.png',
+  'assets/bianca-whatsapp-v3.jpg'
 ]);
 
 http.createServer((req, res) => {
